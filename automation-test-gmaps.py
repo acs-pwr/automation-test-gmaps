@@ -6,6 +6,7 @@ import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import pytest
 
 #Menjalankan Web Browser
 
@@ -33,11 +34,11 @@ finally:
     #direction
     try:
         element = WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.XPATH, "/html/body/div[3]/div[9]/div[8]/div/div[1]/div/div/div[4]/div[1]/button/span"))
+        EC.presence_of_element_located((By.XPATH, "/html/body/div[3]/div[9]/div[8]/div/div[1]/div/div/div[4]/div[1]/button/span/img"))
         )
     finally:
         time.sleep(3)
-        driver.find_element_by_xpath("/html/body/div[3]/div[9]/div[8]/div/div[1]/div/div/div[4]/div[1]/button/span").click()
+        driver.find_element_by_xpath("/html/body/div[3]/div[9]/div[8]/div/div[1]/div/div/div[4]/div[1]/button/span/img").click()
         # starting point
         time.sleep(3)
         driver.find_element_by_xpath("/html/body/div[3]/div[9]/div[3]/div[1]/div[2]/div/div[3]/div[1]/div[1]/div[2]/div[1]/div/input").send_keys(asal)
