@@ -75,6 +75,7 @@ finally:
             # Jl. DR. Sardjito
             print(string_ketiga)
             assert 'Jl. DR. Sardjito' in string_ketiga
+            print("Success")
             time.sleep(5)
             driver.close()
 
